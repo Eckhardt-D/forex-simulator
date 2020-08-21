@@ -23,10 +23,11 @@ const _0x5536 = function (_0x4f4389, _0x17e776) {
   return _0x5536b1;
 };
 const tradesTable = document[_0x5536("0x3")](_0x5536("0x1"));
-let amountOfWinners = 0x0,
-  amountOfLosers = 0x0,
-  actualWinRate = 0x0;
+
 function runSimulation(_0x59832d, _0x3db844, _0x23c2d2, _0x18a338, _0x3ca4f2) {
+  let amountOfWinners = 0,
+    amountOfLosers = 0,
+    actualWinRate = 0;
   tradesTable["innerHTML"] = _0x5536("0x7");
   for (let _0x5ad985 = 0x0; _0x5ad985 < _0x59832d; _0x5ad985++) {
     const _0x4fb3b4 = Math[_0x5536("0x4")](),

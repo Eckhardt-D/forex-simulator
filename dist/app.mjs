@@ -46,6 +46,9 @@ form["addEventListener"](
   (_0x2f51a2) => void _0x2f51a2[_0x2a4c("0xf")]()
 ),
   simButton[_0x2a4c("0x6")](_0x2a4c("0xd"), (_0xc8918e) => {
+    winners["innerText"] = "";
+    losers[_0x2a4c("0xa")] = "";
+    winRate[_0x2a4c("0xa")] = "";
     _0xc8918e[_0x2a4c("0xf")]();
     if (!setError()) {
       const {
