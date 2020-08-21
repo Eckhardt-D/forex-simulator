@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forex Trades Simulator</title>
+    <meta
+      name="description"
+      content="A simulator to visualize different forex strategy outcomes."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <h1 style="text-align: center;">Forex Trade Simulator.</h1>
+    <h2 style="text-align: center;">Showing you what's possible.</h2>
+    <footer>
+      Built by
+      <a href="https://www.youtube.com/channel/UCd4UmlBFIhj-yJrzn6foxgw"
+        >Eckhardt (Kaizen) Dreyer</a
+      >
+    </footer>
+    <div class="inputs">
+      <form>
+        <section>
+          <label for="numTrades">Number of Trades Taken:</label>
+          <input
+            value="10"
+            min="1"
+            step="1"
+            type="number"
+            name="numTrades"
+            id="numTrades"
+          />
+        </section>
+        <section>
+          <label for="startingBalance">Starting Balance ($):</label>
+          <input
+            value="100"
+            step="0.01"
+            type="number"
+            id="startingBalance"
+            name="startingBalance"
+          />
+        </section>
+        <section>
+          <label for="riskPerTrade">Risk per Trade (0.01 = 1%):</label>
+          <input
+            type="number"
+            name="riskPerTrade"
+            id="riskPerTrade"
+            value="0.01"
+            min="0.001"
+            max="1"
+            step="0.001"
+          />
+        </section>
+        <section>
+          <label for="riskToReward">Risk to Reward Ratio (1:</label>
+          <input
+            type="number"
+            min="0.5"
+            max="100"
+            step="0.5"
+            value="3"
+            name="riskToReward"
+            id="riskToReward"
+          />
+        </section>
+        <section>
+          <label for="strategyWinRate">Strategy Win Rate (0.33 = 33%):</label>
+          <input
+            type="number"
+            min="0.01"
+            max="1"
+            step="0.01"
+            value="0.33"
+            name="strategyWinRate"
+            id="strategyWinRate"
+          />
+        </section>
+        <button id="simButton">Simulate</button>
+        <p id="error"></p>
+      </form>
+    </div>
+    <div class="results">
+      <p>Number of Winners: <span id="winners"></span></p>
+      <p>Number of Losers: <span id="losers"></span></p>
+      <p>Win Rate Achieved: <span id="winRate"></span></p>
+    </div>
+    <div id="tableContainer">
+      <table id="tradesTable" width="100%">
+        <tr>
+          <th>Trade #</th>
+          <th>Opening Balance</th>
+          <th>Profit / Loss</th>
+          <th>Closing Balance</th>
+        </tr>
+      </table>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.19.0/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.19.0/firebase-analytics.js"></script>
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    <script type="module" src="app.mjs"></script>
+  </body>
+</html>
